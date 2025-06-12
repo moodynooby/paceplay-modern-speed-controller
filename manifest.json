@@ -1,19 +1,19 @@
 {
-  "name": "Video Speed Controller",
-  "short_name": "videospeed",
-  "version": "0.6.3.3",
+  "name": "PacePlay : Modern Video Speed Controller",
+  "short_name": "PacePlay",
+  "version": "1",
   "manifest_version": 2,
   "description": "Speed up, slow down, advance and rewind HTML5 audio/video with shortcuts",
-  "homepage_url": "https://github.com/codebicycle/videospeed",
+  "homepage_url": "https://github.com/moodynooby/paceplay-modern-speed-controller",
   "browser_specific_settings": {
     "gecko": {
-      "id": "{7be2ba16-0f1e-4d93-9ebc-5164397477a9}"
+      "id": "{7be2ba16-0f1e-4d93-9ebc-5464397477a9}"
     }
   },
   "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+    "16": "icons/icon.svg",
+    "48": "icons/icon.svg",
+    "128": "icons/icon.svg"
   },
   "permissions": ["storage"],
   "options_ui": {
@@ -22,9 +22,9 @@
   },
   "browser_action": {
     "default_icon": {
-      "19": "icons/icon19.png",
-      "38": "icons/icon38.png",
-      "48": "icons/icon48.png"
+      "19": "icons/icon.svg",
+      "38": "icons/icon.svg",
+      "48": "icons/icon.svg"
     },
     "default_popup": "popup.html"
   },

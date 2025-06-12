@@ -3,14 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.open(chrome.runtime.getURL("options.html"));
   });
 
-  document.querySelector("#about").addEventListener("click", function () {
-    window.open("https://github.com/codebicycle/videospeed");
-  });
-
-  document.querySelector("#feedback").addEventListener("click", function () {
-    window.open("https://github.com/codebicycle/videospeed/issues");
-  });
-
   document.querySelector("#enable").addEventListener("click", function () {
     toggleEnabled(true, settingsSavedReloadMessage);
   });
@@ -39,12 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("#enable").classList.toggle("hide", enabled);
     document.querySelector("#disable").classList.toggle("hide", !enabled);
 
-    const suffix = `${enabled ? "" : "_disabled"}.png`;
+    const suffix = `${enabled ? "" : "-disabled"}.svg`;
     chrome.browserAction.setIcon({
       path: {
-        "19": "icons/icon19" + suffix,
-        "38": "icons/icon38" + suffix,
-        "48": "icons/icon48" + suffix
+        "19": "icons/icon" + suffix,
+        "38": "icons/icon" + suffix,
+        "48": "icons/icon" + suffix
       }
     });
   }

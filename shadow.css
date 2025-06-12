@@ -1,3 +1,15 @@
+:root {
+  --primary-color: #0060df;
+  --secondary-color: #6c757d;
+  --background-color: #e8e6e3;
+  --text-color: #181a1b;
+  @media (prefers-color-scheme: dark) {
+    --primary-color: #0060df;
+    --secondary-color: #6c757d;
+    --background-color: #181a1b;
+    --text-color: #e8e6e3;
+  }
+}
 * {
   line-height: 1.9em;
   font-family: sans-serif;
@@ -13,8 +25,8 @@
   top: 0;
   left: 0;
 
-  background: black;
-  color: white;
+  background: var(--background-color);
+  color: var(--text-color);
 
   border-radius: 5px;
   padding: 5px;
@@ -58,14 +70,14 @@
 
 button {
   cursor: pointer;
-  color: black;
-  background: white;
+  color: var(--text-color);
+  background: var(--background-color);
   font-weight: bold;
   border-radius: 5px;
   padding: 3px 6px 3px 6px;
   font-size: 14px;
   line-height: 14px;
-  border: 1px solid white;
+  border: 1px solid var(--text-color);
   font-family: "Lucida Console", Monaco, monospace;
   margin-bottom: 2px;
 }
@@ -79,7 +91,7 @@ button:hover {
 }
 
 button:active {
-  background: #ccc;
+  background: var(--background-color);
 }
 
 button.rw {
