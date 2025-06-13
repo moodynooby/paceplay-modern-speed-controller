@@ -1,3 +1,7 @@
+# TLDR OF CHANGES
+Major UI revamp
+
+
 # The science of accelerated playback
 
 **TL;DR: faster playback translates to better engagement and retention.**
