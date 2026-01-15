@@ -1,45 +1,108 @@
 :root {
+  /* Design Tokens from Options Page */
+  --bg-color: #f0f2f5;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --text-color: #1c1e21;
+  --text-secondary: #606770;
   --primary-color: #0060df;
-  --secondary-color: #6c757d;
-  --background-color: #e8e6e3;
-  --text-color: #181a1b;
-  @media (prefers-color-scheme: dark) {
-    --primary-color: #0060df;
-    --secondary-color: #6c757d;
-    --background-color: #181a1b;
-    --text-color: #e8e6e3;
+  --primary-hover: #0050bc;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --status-success: #28a745;
+  --status-error: #ff4d4f;
+  --glass-blur: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #0f1113;
+    --card-bg: rgba(30, 32, 35, 0.85);
+    --text-color: #e4e6eb;
+    --text-secondary: #b0b3b8;
+    --border-color: rgba(255, 255, 255, 0.1);
   }
 }
 
 body {
-  width: 8em;
-  background-color: var(--background-color);
+  margin: 0;
+  padding: 12px;
+  width: 170px;
+  /* Slightly narrower to fit standard popups */
+  font-family: 'Inter', -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow: hidden;
 
+  /* Glassmorphism moved to body */
+  background: var(--card-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
 }
 
 button {
   width: 100%;
-  border: 1px solid var(--text-color);
-  border-radius: 7px;
-  outline: none;
-  color: var(--text-color);
-  font: inherit;
-  user-select: none;
-  background-color: var(--primary-color);
-  margin-bottom: 0.5em;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  /* Replaces gap */
 }
 
-.secondary {
-  font-size: 0.95em;
-  margin: 0.15em 0;
+#enable {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+#enable:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+#disable {
+  background-color: #ff4d4f1a;
+  color: #ff4d4f;
+  border: 1px solid #ff4d4f33;
+}
+
+#disable:hover {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+#config {
+  background: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  margin-top: 4px;
+}
+
+#config:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  #config:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+
+#status {
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 4px;
+  line-height: 1.3;
+  margin-bottom: 8px;
 }
 
 .hide {
   display: none;
-}
-
-
-#status {
-  color: var(--text-color);
-  margin-bottom: 0.5em;
 }
